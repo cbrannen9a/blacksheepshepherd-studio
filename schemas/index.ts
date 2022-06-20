@@ -1,5 +1,4 @@
-import createSchema from "part:@sanity/base/schema-creator";
-import schemaTypes from "all:part:@sanity/base/schema-type";
+
 
 import {
   portableText,
@@ -11,10 +10,7 @@ import {
 } from "./objects";
 import { navigation, page, route, siteSettings } from "./documents";
 
-export default createSchema({
-  name: "default",
-
-  types: schemaTypes.concat([
+export const schemaTypes = [ 
     // documents
     navigation,
     page,
@@ -27,5 +23,4 @@ export default createSchema({
     textSection,
     figure,
     imageSection,
-  ]),
-});
+  ];

@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 export default {
   name: "page",
   title: "Page",
@@ -8,7 +10,7 @@ export default {
       title: "Page",
       type: "reference",
       to: [{ type: "route" }],
-      validation: (Rule) => Rule.required(),
+      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: "content",

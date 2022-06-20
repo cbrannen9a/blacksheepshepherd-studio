@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 export default {
   name: "navigation",
   title: "Navigation",
@@ -7,7 +9,7 @@ export default {
       name: "title",
       title: "Title",
       type: "string",
-      validation: (Rule) => Rule.required(),
+      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: "navigation",
