@@ -1,13 +1,13 @@
-import S from "@sanity/desk-tool/structure-builder";
+import { StructureBuilder } from "sanity/desk";
 
 const filteredDocTypes = ["siteSettings", "route", "navigation"];
 
-export default () =>
+export const structure = (S: StructureBuilder) =>
   S.list()
     .title("Site")
     .items([
       ...S.documentTypeListItems().filter(
-        (listItem) => !filteredDocTypes.includes(listItem.getId())
+        (listItem) => !filteredDocTypes.includes(listItem?.getId() ?? "")
       ),
       S.divider(),
       S.listItem()

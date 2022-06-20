@@ -21,7 +21,7 @@ export default {
     select: {
       label: "label",
     },
-    prepare({ label }) {
+    prepare({ label }: { label: string }) {
       return {
         title: `${label}`,
         subtitle: "Text section",

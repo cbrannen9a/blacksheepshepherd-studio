@@ -1,6 +1,9 @@
-import React from "react";
+import React, { FC, ReactNode } from "react";
+import { Rule } from "sanity";
 
-const LinkRender = ({ children }) => <span>{children} 🌍</span>;
+const LinkRender: FC<{ children?: ReactNode }> = ({ children }) => (
+  <span>{children} 🌍</span>
+);
 
 export default {
   title: "URL",
@@ -11,7 +14,7 @@ export default {
       title: "URL",
       name: "href",
       type: "url",
-      validation: (Rule) =>
+      validation: (Rule: Rule) =>
         Rule.uri({
           allowRelative: true,
           scheme: ["https", "http", "mailto", "tel"],
