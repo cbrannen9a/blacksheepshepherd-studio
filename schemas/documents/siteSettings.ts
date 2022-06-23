@@ -24,7 +24,11 @@ export default {
       type: "color",
       name: "primaryColor",
       title: "Primary color",
-      description: "Used for Text",
+    },
+    {
+      type: "color",
+      name: "secondaryColor",
+      title: "Secondary color",
     },
     {
       type: "color",
