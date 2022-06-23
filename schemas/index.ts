@@ -1,5 +1,3 @@
-
-
 import {
   portableText,
   embedHTML,
@@ -8,19 +6,18 @@ import {
   figure,
   imageSection,
 } from "./objects";
-import { navigation, page, route, siteSettings } from "./documents";
+import { page, route, siteSettings } from "./documents";
 
-export const schemaTypes = [ 
-    // documents
-    navigation,
-    page,
-    route,
-    siteSettings,
-    // objects
-    portableText,
-    embedHTML,
-    link,
-    textSection,
-    figure,
-    imageSection,
-  ];
+export const schemaTypes = [
+  // documents
+  page,
+  route,
+  siteSettings,
+  // objects
+  portableText,
+  embedHTML,
+  link,
+  textSection,
+  figure,
+  imageSection,
+];

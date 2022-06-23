@@ -19,7 +19,6 @@ export default {
         source: "title",
         maxLength: 96,
       },
-      validation: (Rule: Rule) => Rule.required(),
     },
   ],
 
@@ -29,7 +28,7 @@ export default {
       slug: "slug.current",
     },
     prepare({ title, slug }: { title: string; slug: string }) {
-      return { title: title, subtitle: `/${slug}` };
+      return { title: title, subtitle: `/${slug ? slug : ""}` };
     },
   },
 };

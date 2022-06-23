@@ -55,15 +55,25 @@ export default {
     },
     {
       name: "mainNav",
-      type: "reference",
+      type: "array",
       title: "Main Nav",
-      to: { type: "navigation" },
+      of: [
+        {
+          type: "reference",
+          to: { type: "route" },
+        },
+      ],
     },
     {
       name: "footerNav",
-      type: "reference",
+      type: "array",
       title: "Footer Nav",
-      to: { type: "navigation" },
+      of: [
+        {
+          type: "reference",
+          to: { type: "route" },
+        },
+      ],
     },
   ],
 };

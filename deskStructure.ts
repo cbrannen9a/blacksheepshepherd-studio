@@ -1,6 +1,6 @@
 import { StructureBuilder } from "sanity/desk";
 
-const filteredDocTypes = ["siteSettings", "route", "navigation"];
+const filteredDocTypes = ["siteSettings", "route"];
 
 export const structure = (S: StructureBuilder) =>
   S.list()
@@ -27,11 +27,6 @@ export const structure = (S: StructureBuilder) =>
                 .title("Routes")
                 .schemaType("route")
                 .child(S.documentTypeList("route").title("Routes")),
-
-              S.listItem()
-                .title("Navigation")
-                .schemaType("navigation")
-                .child(S.documentTypeList("navigation").title("Navigation")),
             ])
         ),
     ]);
