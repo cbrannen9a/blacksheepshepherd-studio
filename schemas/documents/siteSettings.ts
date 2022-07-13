@@ -3,6 +3,7 @@ export default {
   type: "document",
   title: "Site Settings",
   __experimental_actions: ["update", "create", /* 'delete', */ "publish"],
+  fieldsets: [{ name: "copyright", title: "Copyright" }],
   fields: [
     {
       name: "title",
@@ -78,6 +79,23 @@ export default {
           to: { type: "route" },
         },
       ],
+    },
+    {
+      name: "footerText",
+      type: "portableText",
+      title: "Footer Text",
+    },
+    {
+      name: "copyrightText",
+      type: "string",
+      title: "Copyright Text",
+      fieldset: "copyright",
+    },
+    {
+      name: "copyrightLink",
+      type: "link",
+      title: "Copyright Link",
+      fieldset: "copyright",
     },
   ],
 };
