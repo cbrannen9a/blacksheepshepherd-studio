@@ -21,7 +21,7 @@ export default {
       },
     },
     {
-      type: "image",
+      type: "figure",
       options: { hotspot: true },
     },
     { type: "embedHTML" },
