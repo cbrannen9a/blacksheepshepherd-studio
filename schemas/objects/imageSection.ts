@@ -2,6 +2,7 @@ export default {
   type: "object",
   name: "imageSection",
   title: "Image Section",
+  fieldsets: [{ name: "image", title: "Image" }],
   fields: [
     {
       name: "label",
@@ -13,8 +14,25 @@ export default {
     },
     {
       name: "image",
-      type: "figure",
+      type: "image",
       title: "Image",
+      fieldset: "image",
+      options: {
+        collapsed: false,
+      },
+    },
+    {
+      title: "Caption",
+      name: "caption",
+      type: "string",
+      fieldset: "image",
+    },
+    {
+      name: "alt",
+      type: "string",
+      title: "Alternative text",
+      description: "Important for SEO and accessibility.",
+      fieldset: "image",
     },
     {
       name: "link",
