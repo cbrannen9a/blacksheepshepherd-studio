@@ -50,7 +50,7 @@ export default {
       title: "label",
       media: "image",
     },
-    prepare({ title, media }: { title: string; media: any }) {
+    prepare({ title, media }) {
       return {
         title: `Image: ${title}`,
         subtitle: "Image section",
