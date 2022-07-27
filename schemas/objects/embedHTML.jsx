@@ -1,6 +1,6 @@
 import React from "react";
 
-const HTMLpreview = ({ value }: { value: { html: string } }) => (
+const HTMLpreview = ({ value }) => (
   // eslint-disable-next-line
   <div dangerouslySetInnerHTML={{ __html: value.html }} />
 );

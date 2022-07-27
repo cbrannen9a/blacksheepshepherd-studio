@@ -1,5 +1,3 @@
-import { Rule } from "sanity";
-
 export default {
   name: "route",
   title: "Route",
@@ -9,7 +7,7 @@ export default {
       name: "title",
       title: "Title",
       type: "string",
-      validation: (Rule: Rule) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "slug",
@@ -27,7 +25,7 @@ export default {
       title: "title",
       slug: "slug.current",
     },
-    prepare({ title, slug }: { title: string; slug: string }) {
+    prepare({ title, slug }) {
       return { title: title, subtitle: `/${slug ? slug : ""}` };
     },
   },
